@@ -1,0 +1,106 @@
+.grupnitreninzi {
+  background-color: $bg-color;
+
+  &__img1 {
+    @include bg-clip1("../img/pages/treninzi1.jpg");
+  }
+
+  &__img2 {
+    @include bg-clip2("../img/pages/grupa2.jpg");
+  }
+
+  &__txt {
+    margin-bottom: $gutter-vertical-l;
+    padding: 0 5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-m;
+    }
+
+    h3 {
+      text-transform: none;
+      margin-bottom: 5rem;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .row {
+    background-size: 100%;
+    height: 50rem;
+
+    display: flex;
+    margin-bottom: $gutter-vertical-m;
+
+    @include respond (phone){
+      min-height: 55rem;
+    }
+  }
+
+  .reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__program1 {
+    @include bg-skew-deg(105deg, "../img/pages/startout.jpg");
+  }
+
+  &__program2 {
+    @include bg-skew-deg(-105deg, "../img/pages/bodyweight.jpg");
+  }
+
+  &__program3 {
+    @include bg-skew-deg(105deg, "../img/pages/spartan.jpg");
+  }
+
+  &__program4 {
+    @include bg-skew-deg(-105deg, "../img/pages/lift.jpg");
+  }
+
+  &__program5 {
+    @include bg-skew-deg(105deg, "../img/pages/kids.jpg");
+  }
+
+  .program-start,
+  .program-body,
+  .program-spartan,
+  .program-lift,
+  .program-kids {
+    width: 50%;
+    text-align: center;
+    padding: 5rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+      padding: 3rem;
+    }
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.7;
+
+      @include respond(phone) {
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .program-empty {
+    display: none;
+  }
+}

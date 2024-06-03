@@ -1,0 +1,211 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/button";
+@import "layout/footer";
+@import "layout/navigation";
+
+@import "pages/galerija";
+@import "pages/home";
+@import "pages/kontakt";
+@import "pages/onama";
+@import "pages/raspored";
+@import "pages/skidajKg";
+@import "pages/treninzi";
+@import "pages/upisi";
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+.navbar {
+  position: relative;
+  z-index: 999;
+}
+
+.nav-item {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-right: 2.5rem;
+  width: max-content;
+
+  a {
+    color: $font-color !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    text-decoration: none !important;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: currentColor;
+    }
+  }
+}
+
+#underline {
+  @include link-underline($color-primary-red);
+}
+
+#underline1 {
+  @include link-underline($color-dark);
+}
+
+.dropdown-menu {
+  border-top: none !important;
+  background: transparent !important;
+
+  & .dropdown-item {
+    color: $font-color;
+    font-family: "Oswald", sans-serif;
+
+    &:hover {
+      background: rgba(219, 0, 0, 0.7);
+    }
+  }
+}
+
+#nav1 {
+  .nav-item a:hover {
+    color: $color-dark !important;
+  }
+  .dropdown-menu {
+    background-color: $color-primary-red !important;
+
+    & .dropdown-item:hover {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: $font-color !important;
+    }
+  }
+}
+
+.navbar-brand {
+  margin-top: 1.5rem;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    transition: 1.3s;
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 10rem;
+  }
+}
+
+#carouselExampleCaptions {
+  margin-top: -18rem;
+  width: 100%;
+  height: 90vh;
+
+  @include respond(tab-port) {
+    height: 75vh;
+  }
+
+  @include respond(phone) {
+    height: 90vh;
+  }
+}
+
+.carousel-item {
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    height: 75vh;
+  }
+  @include respond(phone) {
+    height: 90vh;
+  }
+
+  &:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../img/home/_BM11170-01-s.jpg);
+    background-size: cover;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+      only screen and (min-width: 125em) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../img/home/_BM11170-06.jpg);
+    }
+  }
+
+  &:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../img/home/_BM10916-small.jpg);
+    background-size: cover;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+      only screen and (min-width: 125em) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../img/home/_BM10916-01.jpg);
+    }
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 12rem !important;
+  left: -50%;
+  text-transform: uppercase;
+  text-align: left !important;
+
+  h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: bounceInRight 1s;
+    font-family: "Oxygen", sans-serif;
+    letter-spacing: 3px;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    animation: bounceInLeft 2s;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  h1 {
+    font-size: 8rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: $color-primary-red;
+    animation: bounceInRight 3s;
+
+    @include respond(phone) {
+      font-size: 6.5rem;
+    }
+  }
+}
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+

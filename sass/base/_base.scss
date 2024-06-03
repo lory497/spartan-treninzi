@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxygen:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.spartan__container,
+.ponuda__container,
+.treninzi__container,
+.upisi__content,
+.treneri__container,
+.footer__container,
+.onama__container,
+.kontakt__container,
+.grupnitreninzi__container,
+.galerija__slike,
+.galerija__video,
+.upis__container,
+.raspored__container,
+.skidajKg__container {
+  max-width: 120rem;
+  margin-inline: auto;
+  //padding: 0 5rem;
+}

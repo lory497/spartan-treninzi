@@ -1,0 +1,98 @@
+.raspored {
+  background-color: $bg-color;
+
+  &__wrapper {
+    padding: 0 3rem;
+    padding-bottom: $gutter-vertical-l;
+
+    @include respond(tab-port) {
+      padding-bottom: $gutter-vertical-m;
+    }
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: $font-color;
+    font-family: "Oxygen", sans-serif;
+    text-align: center;
+    table-layout: auto;
+
+    thead tr {
+      background-color: $color-dark;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      th {
+        padding: 1rem;
+        vertical-align: top;
+        border: 3px solid $bg-color;
+      }
+    }
+
+    tbody {
+      background-color: #080808;
+      td {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+        border: 3px solid $bg-color;
+        text-transform: uppercase;
+
+        a {
+          color: $font-color;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    th:first-child {
+      border-top-left-radius: 0.5rem;
+    }
+
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 0.5rem;
+    }
+
+    th:last-child {
+      border-top-right-radius: 0.5rem;
+    }
+
+    tr > th:first-child,
+    tr > td:first-child {
+      position: sticky;
+      border-left: none;
+      left: 0;
+      background-color: $color-dark;
+    }
+  }
+}
+
+.body {
+  background: #db9700;
+}
+.start {
+  background: $color-primary-red;
+}
+
+.spartan1 {
+  background: #069906;
+}
+
+.lift {
+  background: #0e3c95;
+}
+
+.yoga {
+  background: #ff32cb;
+}

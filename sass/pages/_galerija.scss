@@ -1,0 +1,47 @@
+.galerija {
+  background-color: $bg-color;
+  padding: 0 5rem;
+
+  h3 {
+    margin-bottom: 10rem;
+    font-size: 2.6rem;
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+    margin-bottom: $gutter-vertical-l;
+  }
+
+  & > div {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .galerija__video {
+    padding-bottom: $gutter-vertical-l;
+
+    .swiper,
+    .swiper-wrapper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      border: 2px solid $color-dark;
+      height: 30rem;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.btn {
+  &,
+  &:link,
+  &:visited,
+  &[type="submit"] {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+    background-color: $color-primary-red;
+    color: $font-color;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 10px 10px rgba(#000, 0.4);
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-dark;
+      transform: scale(1.1);
+      color: $font-color;
+    }
+
+    &:active,
+    &:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(#000, 0.2);
+    }
+  }
+}
+
+#btn-dark {
+  background-color: $color-dark;
+}

@@ -1,0 +1,84 @@
+.kontakt {
+  background-color: $bg-color;
+  padding: 0 5rem;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-bottom: $gutter-vertical-l;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    width: 50%;
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    ul {
+      margin-bottom: 5rem;
+
+      li {
+        list-style-type: none;
+        align-items: start;
+        font-size: $default-font-size;
+        font-weight: 500;
+        color: $font-color;
+        line-height: 1.7;
+
+        a {
+          color: $font-color;
+
+          &:hover {
+            color: $color-primary-red;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 3rem;
+
+      .fa-location-dot {
+        color: $color-primary-red;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__map {
+    width: 50%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    .map-view {
+      position: relative;
+      height: 40rem;
+      width: 80%;
+      background-color: #fff;
+
+      @include respond(tab-port) {
+        width: 90%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+}
